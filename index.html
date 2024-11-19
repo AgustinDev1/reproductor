@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web media player</title>
+    <!-- Vinculamos Font Awesome para los iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Botón para cambiar entre modo día y noche -->
+    <button id="toggleButton">
+        <i id="modeIcon" class="fas fa-sun"></i> Cambiar a Noche
+    </button>
+
+    <!-- Reproductor de música -->
+    <div id="reproductor">
+        <h2>Reproductor Musical</h2>
+
+        <!-- Selector de archivos de música -->
+        <input type="file" id="fileInput" accept="audio/*" multiple>
+
+        <!-- Controles del reproductor -->
+        <div id="controls">
+            <button id="playPauseButton">
+                <i id="playPauseIcon" class="fas fa-play"></i>
+            </button>
+            <button id="nextButton">
+                <i class="fas fa-step-forward"></i>
+            </button>
+            <button id="prevButton">
+                <i class="fas fa-step-backward"></i>
+            </button>
+        </div>
+
+        <!-- Nombre de la canción actual -->
+        <div id="currentSong">
+            <p>No hay canción seleccionada</p>
+        </div>
+
+        <!-- Barra de progreso de la canción -->
+        <input type="range" id="progressBar" value="0" max="100" step="1" disabled>
+
+        <!-- Sección para mostrar las canciones guardadas -->
+        <h3>Canciones Guardadas</h3>
+        <ul id="savedSongsList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
